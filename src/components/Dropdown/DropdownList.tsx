@@ -1,4 +1,4 @@
-import DropdownOption from "./DropdownOption";
+import DropdownOption from "./SearchableDropdown/DropdownOption";
 
 interface OptionObj {
   label: string;

@@ -1,6 +1,6 @@
 import { ChangeEvent, useEffect, useState } from "react";
-import DropdownList from "./DropdownList";
-import ScrollableBox from "./ScrollableBox";
+import DropdownList from "../DropdownList";
+import ScrollableBox from "../ScrollableBox";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown, faClose } from "@fortawesome/free-solid-svg-icons";
 interface OptionObj {
@@ -44,7 +44,7 @@ const SearchableDropdown = ({
       setTimeout(() => {
         setIsListOpen(false);
         setIsBlurDelayed(false);
-      }, 100); // Adjust the delay as needed
+      }, 100);
       setIsBlurDelayed(true);
     }
   };

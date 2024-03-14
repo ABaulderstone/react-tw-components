@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import SearchableDropdown from "./components/SearchableDropdown";
+import SearchableDropdown from "./components/Dropdown/SearchableDropdown";
 import Chip from "./components/Chip";
 
 function App() {
@@ -24,8 +24,13 @@ function App() {
       </section>
       {value && <p>{value}</p>}
       <div>
-        <Chip label="Test" />
-        <Chip label="Red" backgroundColor="bg-red-500" />
+        <Chip label="Test" onClick={console.log} />
+        <Chip
+          label="Red"
+          backgroundColor="bg-red-500"
+          onClose={console.log}
+          onClick={console.log}
+        />
       </div>
     </>
   );

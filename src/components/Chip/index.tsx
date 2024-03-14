@@ -1,4 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { TWBGColor } from "../../utilities/utility-types/tw-color";
+import { faClose } from "@fortawesome/free-solid-svg-icons";
 
 interface ChipProps {
   label: string;
@@ -22,15 +24,20 @@ const Chip = ({
     e.preventDefault();
     onClose && onClose(label);
   };
+
+  const onClickClasses = onClick ? "hover:scale-105 hover:cursor-pointer" : "";
   return (
     <span
       onClick={handleSpanClick}
-      className={`relative m-1 inline-flex select-none items-center justify-between whitespace-nowrap rounded-full px-3 py-1 font-sans font-bold text-white ${backgroundColor}`}
+      className={`m-1 inline-flex select-none items-center justify-between whitespace-nowrap rounded-full px-3 py-1 font-sans font-bold text-white ${backgroundColor} ${onClickClasses}`}
     >
       {label}
       {onClose && (
-        <button onClick={handleCloseClick} className="ml-2">
-          X
+        <button
+          onClick={handleCloseClick}
+          className="ml-2.5 text-sm focus:outline-none hover:text-black self-start"
+        >
+          <FontAwesomeIcon icon={faClose} />
         </button>
       )}
     </span>
