@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import SearchableDropdown from "./components/SearchableDropdown";
+import Chip from "./components/Chip";
 
 function App() {
   const [value, setValue] = useState(null);
@@ -22,6 +23,10 @@ function App() {
         />
       </section>
       {value && <p>{value}</p>}
+      <div>
+        <Chip label="Test" />
+        <Chip label="Red" backgroundColor="bg-red-500" />
+      </div>
     </>
   );
 }
